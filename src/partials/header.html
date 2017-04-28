@@ -1,0 +1,48 @@
+<div class="row expanded header">
+  <div class="row">
+    <div class="top-menu no-padd column">
+        <ul class="menu float-left">
+          <li><i class="fa fa-phone-square" aria-hidden="true"></i> +4176 576 78 90</li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> info@jr-handel.ch</li>
+          <li>
+            <ul class="social-icons menu">
+              <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+              <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="search media-object float-right">
+          <div class="media-object-section middle">
+            <input type="text" name="" value="">
+          </div>
+          <div class="media-object-section middle">
+            <a href="" class="button"><i class="fa fa-search" aria-hidden="true"></i></a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="row expanded main-header">
+  <div class="row">
+    <div class="main-menu no-padd column">
+      <img class="logo float-left" src="[[++putanja]]assets/img/logo.png" alt="">
+      <ul class="menu float-right">
+        [[pdoMenu?
+                &parents=`0`
+                &level=`2`
+                &tplOuter=`@INLINE [[+wrapper]]`
+                &parentClass=`menu`
+                &tplParentRow=`@INLINE <li><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a><ul class="menu">[[+wrapper]]</ul></li>`
+                &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]" [[+attributes]]>[[+menutitle]]</a></li>[[+wrapper]]`
+            ]]
+        <!--<li><a href="">Home</a></li>
+        <li><a href="">Über uns</a></li>
+        <li><a href="">Produkti</a></li>
+        <li><a href="">Team</a></li>
+        <li><a href="">Jobs</a></li>
+        <li><a href="">Kontakt</a></li>-->
+      </ul>
+    </div>
+  </div>
+</div>
