@@ -10,14 +10,17 @@
       [[getSelections?
       	&selections=`[[*id]]`
       	&tpl=`product-single`
-        &includeTVs=`poster`
+        &includeTVs=`1`
+        &processTVs=`1`
+        &includeTVList=`Poster`
       ]]
+      <!--CHUNK-->
       <!--<div class="product-single column column-block">
         <div class="product-name column">
-          <h6><a href="[[~[[+id]]]]">[[+pagetitle]]</a></h6>
+          <h6><a href="[[~[[+id]]? &scheme=`full`]]">[[+pagetitle:ucase]]</a></h6>
         </div>
         <div class="product-picture column">
-          <a href="[[~[[+id]]]]"><img src="[[+tv.Poster]]" alt=""></a>
+          <a class="float-center" href="[[~[[+id]]? &scheme=`full`]]"><img [[+tv.Poster:pthumb=`h=224&dims=1`]] alt=""></a>
         </div>
         <div class="product-dsc column">
           <div class="product-dsc-content column">
