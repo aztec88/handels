@@ -10,7 +10,41 @@
   </div>
 </div>
 <div class="row">
-  {{>products-mini}}
+  <div class="products small-12 medium-8 large-9 column">
+    <h4 class="headline-regular">PRODUKTI</h4>
+    <br>
+    <br>
+    <br>
+    <div class="row small-up-1 medium-up-2 large-up-3">
+
+      [[getSelections?
+      &selections=`16`
+      &tpl=`product-single`
+      &includeTVs=`1`
+      &processTVs=`1`
+      &limit=`6`
+      &includeTVList=`Poster`
+    ]]
+      <!--<div class="product-single column column-block">
+        <div class="product-name column">
+          <h6>AREON LUX PARFÜM GOLD 50ML</h6>
+        </div>
+        <div class="product-picture column">
+          <img src="[[++putanja]]assets/img/produkt1.png" alt="">
+        </div>
+        <div class="product-dsc column">
+          <div class="product-dsc-content column">
+            <p>
+              Stilvoll, einzigartig und langanhaltend. Die Areon LUX CAR Parfüme – ein Muss für jeden. Überzeugen Sie sich selbst von unseren Parfümen und deren sorgfältig ausgesuchten Düfte. Sie haben die Wahl, ob Sie es auf den mitgelieferten Papierstreifen oder
+              direkt in die Luft verstreuen….
+            </p>
+          </div>
+        </div>
+      </div>-->
+
+    </div>
+
+  </div>
   {{>side-panel}}
 </div>
 
