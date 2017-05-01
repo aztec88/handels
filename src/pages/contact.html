@@ -1,0 +1,110 @@
+{{>header}}
+<div class="row content">
+  <div class="contact small-12 medium-8 large-9 column">
+    <div class="column">
+      <h4 class="headline-regular">KONTAKTFORMULAR</h4>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    [[!FormIt?
+               &hooks=`email,redirect`
+               &emailTpl=`emailChunk`
+               &emailTo=`aztec88@gmail.com`
+               &redirectTo=``
+               &emailSubject=`HandelsGesellschaft web kontakt`
+              ]]
+
+    [[!+fi.validation_error_message:notempty=`<p>[[!+fi.validation_error_message]]</p>`]]
+
+    <form action="[[~[[*id]]]]" method="post" class="form">
+        <input type="hidden" name="nospam:blank" value="[[+fi.nospam]]" />
+        <div class="small-12 medium-6 column">
+          <label for="name">
+              <span class="error">[[!+fi.error.name]]</span>
+          </label>
+          <input type="text" name="name" id="name" value="[[!+fi.name]]" placeholder="Vormane"/>
+        </div>
+
+        <div class="small-12 medium-6 column">
+          <label for="email">
+              <span class="error">[[!+fi.error.email]]</span>
+          </label>
+          <input type="text" name="email" id="email" value="[[!+fi.email]]" placeholder="E-mail"/>
+        </div>
+
+        <div class="small-12 medium-6 column">
+          <label for="adress">
+              <span class="error">[[!+fi.error.adress]]</span>
+          </label>
+          <input type="text" name="adress" id="adress" value="[[!+fi.adress]]" placeholder="Adresse"/>
+        </div>
+
+        <div class="small-12 medium-6 column">
+          <label for="phone">
+              <span class="error">[[!+fi.error.phone]]</span>
+          </label>
+          <input type="text" name="phone" id="phone" value="[[!+fi.phone]]" placeholder="Telefon" />
+        </div>
+        <div class="column">
+          <label for="text">
+              <span class="error">[[!+fi.error.text]]</span>
+          </label>
+          <textarea name="text" id="text" cols="55" rows="7" value="[[!+fi.text]]" placeholder="Nachricht"></textarea>
+        </div>
+        <br class="clearfix" />
+
+        <div class="form-buttons column">
+            <input type="submit" class="button float-right" value="Senden" />
+        </div>
+    </form>
+  </div>
+  <div class="contact-side-panel small-12 medium-4 large-3 column">
+    <ul class="vertical-list side menu vertical">
+      <li><h4>INFORMATION</h4></li>
+      <li>
+        <p>Um die Zusammenarbeit zu verbessern haben wir eine Möglichkeit,
+          uns per Telefon, E-Mail-Adresse oder die schnellste dieses Formular
+          zu kontaktieren.</p>
+          <br><br>
+      </li>
+      <li>
+        <div class="media-object">
+          <div class="media-object-section service-text middle">
+            <p>Bahnhofstrasse 39 9200 Gossau SG</p>
+          </div>
+          <div class="media-object-section service-icon">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="media-object">
+          <div class="media-object-section service-text middle">
+            <p>+4176 576 78 90</p>
+            <p>+4179 159 99 23</p>
+          </div>
+          <div class="media-object-section service-icon">
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="media-object">
+          <div class="media-object-section service-text middle">
+            <p>Weltweiter Versand</p>
+          </div>
+          <div class="media-object-section service-icon">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="map column">
+    <iframe width="100%" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJqXYXkMjgmkcRthkloRaP2uI&key=AIzaSyCXmtrA9ZpzP2HbMMTl8MeAUtgCN9jXeHk" allowfullscreen></iframe>
+  </div>
+</div>
+
+{{>footer}}

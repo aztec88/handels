@@ -13,12 +13,15 @@
           </li>
         </ul>
         <div class="search media-object float-right">
+          <form id="my_id" action="[[~26]]" method="[[+method:default=`get`]]">
           <div class="media-object-section middle">
-            <input type="text" name="" value="">
+            <input id="searchField" type="search" name="pretraga" placeholder="" >
           </div>
           <div class="media-object-section middle">
-            <a href="" class="button"><i class="fa fa-search" aria-hidden="true"></i></a>
+            <input id="searchIcon" class="button" type="image" alt="Search" src="[[++putanja]]assets/img/search-icon.png">
           </div>
+          <input  type="hidden" name="id" value="[[+landing:default=[[26]]]]" />
+          </form>
         </div>
     </div>
   </div>
