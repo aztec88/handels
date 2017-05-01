@@ -10,7 +10,7 @@
     </div>
 
     <div class="row small-up-1 medium-up-2 large-up-3">
-      [[pdoResources?
+      <!--[[pdoResources?
                       &limit=`100`
                       &parents=`[[*id]]`
                       &depth=`0`
@@ -18,7 +18,16 @@
                       &includeTVs=`1`
                       &processTVs=`1`
                       &includeTVList=`Poster`
-                  ]]
+                  ]]-->
+                  [[!pdoPage?
+                  &parents=`[[*id]]`
+                  &tpl=`product-single`
+                  &pageLimit=`3`
+                  &maxLimit=`3`
+                  &includeTVs=`Poster`
+              ]]
+
+
       <!--CHUNK-->
       <!--<div class="product-single column column-block">
         <div class="product-name column">
@@ -37,6 +46,13 @@
       </div>-->
 
     </div>
+    [[!+page.nav:notempty=`
+      <div class="paging column">
+        <ul class="pageList">
+          [[!+page.nav]]
+        </ul>
+      </div>
+    `]]
   </div>
   {{>side-panel}}
 </div>

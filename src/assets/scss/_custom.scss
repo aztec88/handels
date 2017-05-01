@@ -7,6 +7,24 @@
    pointer-events: none;
    cursor: default;
 }
+.pagination li {
+    display: inline-block!important;
+    font-size: 0.875rem;
+    margin-right: 0.0625rem;
+    border-radius: 0;
+}
+.paging{
+  text-align: center;
+}
+.pagination{
+  display: inline;
+  li.active{
+    a{
+      background: $main-color!important;
+      color: white;
+    }
+  }
+}
 body{
   p{
     @include breakpoint(small) {
@@ -79,13 +97,17 @@ body{
     margin: 10px 0;
   }
   ul.menu{
+    li.is-dropdown-submenu-parent > a::after{
+      /*right: -15px;*/
+    }
     margin-top: 11px;
     li{
       /*margin: 25px 25px;*/
       a{
+        text-transform: uppercase;
         color: $body-font-color;
-        font-size: 20px;
-        padding: 24px 25px;
+        font-size: 16px;
+        padding: 26px 25px;
         &:hover{
           color: $main-color;
         }
@@ -114,6 +136,10 @@ body{
   }
 }
 .vertical-list{
+  .menu .active > a {
+    background: none;;
+    color: $main-color;
+}
   li{
     h4{
       font-weight: bold;
@@ -123,6 +149,7 @@ body{
       border-bottom: 2px solid $main-color;
     }
     a{
+      text-transform: uppercase;
       padding-left: 0;
       color: white;
     }
@@ -149,6 +176,7 @@ body{
     text-align: right;
   }
 }
+
 .newsletter{
   display: inline;
   margin: 5px 0 0 0;

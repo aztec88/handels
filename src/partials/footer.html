@@ -12,11 +12,20 @@
       </ul>
     </div>
     <div class="column no-padd">
-      <ul class="vertical-list menu vertical">
+      <ul class="vertical-list menu vertical" data-accordion-menu>
         <li><h4>KATEGORIEN</h4></li>
-        <li><a href="">AUTO Parfüme</a></li>
+        [[pdoMenu?
+            &parents=`0`
+            &level=`4`
+            &resources=`-2,-1,-25`
+            &tplOuter=`@INLINE [[+wrapper]]`
+            &parentClass=`menu`
+            &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical nested">[[+wrapper]]</ul></li>`
+            &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>[[+wrapper]]`
+        ]]
+        <!--<li><a href="">AUTO Parfüme</a></li>
         <li><a href="">LUX Parfüme</a></li>
-        <li><a href="">HAUS Parfüme</a></li>
+        <li><a href="">HAUS Parfüme</a></li>-->
       </ul>
     </div>
     <div class="column no-padd">
