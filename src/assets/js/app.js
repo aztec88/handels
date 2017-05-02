@@ -7,7 +7,7 @@ $('.autoplay').slick({
   arrows: true,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 5000,
 });
 
 //PRODUCT GALLERY
