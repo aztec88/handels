@@ -3,21 +3,29 @@
     <div class="column no-padd">
       <ul class="vertical-list menu vertical">
         <li><h4>NAVIGATION</h4></li>
-        <li><a href="">Home</a></li>
+        [[pdoMenu?
+            &parents=`0`
+            &level=`1`
+            &resources=`-4`
+            &tplOuter=`@INLINE [[+wrapper]]`
+            &parentClass=`menu`
+            &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical nested">[[+wrapper]]</ul></li>`
+            &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>[[+wrapper]]`
+        ]]
+        <!--<li><a href="">Home</a></li>
         <li><a href="">Über uns</a></li>
         <li><a href="">Produkti</a></li>
         <li><a href="">Team</a></li>
         <li><a href="">Jobs</a></li>
-        <li><a href="">Kontakt</a></li>
+        <li><a href="">Kontakt</a></li>-->
       </ul>
     </div>
     <div class="column no-padd">
       <ul class="vertical-list menu vertical" data-accordion-menu>
         <li><h4>KATEGORIEN</h4></li>
         [[pdoMenu?
-            &parents=`0`
+            &parents=`42`
             &level=`4`
-            &resources=`-2,-1,-25`
             &tplOuter=`@INLINE [[+wrapper]]`
             &parentClass=`menu`
             &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical nested">[[+wrapper]]</ul></li>`
