@@ -13,9 +13,13 @@
     <base href="[[++site_url]]"/>
   </head>
   <body>
+    <div class="off-canvas-content" data-off-canvas-content>
+  <!-- Your page content lives here -->
+  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+  {{> body}}
+</div>
 
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-    {{> body}}
+
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 -->    <script src="[[++putanja]]assets/js/app.js"></script>
   </body>

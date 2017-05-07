@@ -31,7 +31,7 @@
     <div class="main-menu no-padd column">
       <img class="logo float-left show-for-large" src="[[++putanja]]assets/img/logo.png" alt="">
       <img class="logo float-left show-for-medium-only" src="[[++putanja]]assets/img/logo1.png" alt="">
-      <ul class="dropdown menu float-right" data-dropdown-menu>
+      <ul class="desk-menu dropdown menu float-right" data-dropdown-menu>
         [[pdoMenu?
                 &parents=`0`
                 &level=`3`
@@ -53,5 +53,48 @@
 <div class="row mob-header">
   <div class="mob-menu column">
     <img class="logo-mob float-left" src="[[++putanja]]assets/img/logo1.png" alt="">
+    <i class="fa fa-bars fa-2x float-right"  aria-hidden="true" type="button" data-open="offCanvas"></i>
   </div>
 </div>
+
+
+<div class="off-canvas position-right" id="offCanvas" data-transition="push" data-off-canvas>
+
+    <!-- Close button -->
+    <button class="close-button" aria-label="Close menu" type="button" data-close>
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="logo-part column">
+      <br><br>
+      <img class="logo-mob" src="[[++putanja]]assets/img/logo2.png" alt="">
+      <br><br><br>
+    </div>
+    <div class="search-wrapper column">
+      <div class="search media-object">
+        <form id="my_id" action="[[~26]]" method="[[+method:default=`get`]]">
+        <div class="media-object-section middle">
+          <input id="searchField" type="search" name="pretraga" placeholder="" >
+        </div>
+        <div class="media-object-section middle">
+          <input id="searchIcon" class="button" type="image" alt="Search" src="[[++putanja]]assets/img/search-icon.png">
+        </div>
+        <input  type="hidden" name="id" value="[[+landing:default=[[26]]]]" />
+        </form>
+      </div>
+    </div>
+
+
+    <div class="menu-part column">
+      <!-- Menu -->
+      <ul class="vertical menu" data-accordion-menu>
+        [[pdoMenu?
+            &parents=`0`
+            &level=`4`
+            &tplOuter=`@INLINE [[+wrapper]]`
+            &parentClass=`menu`
+            &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical nested">[[+wrapper]]</ul></li>`
+            &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>[[+wrapper]]`
+        ]]
+      </ul>
+    </div>
+  </div>

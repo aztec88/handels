@@ -13,6 +13,7 @@ $('.autoplay').slick({
 //PRODUCT GALLERY
 $('.slider-for').slick({
   slidesToShow: 1,
+  adaptiveHeight: true,
   slidesToScroll: 1,
   arrows: false,
   fade: true,
@@ -24,6 +25,6 @@ $('.slider-nav').slick({
   asNavFor: '.slider-for',
   dots: true,
   arrows: false,
-  centerMode: true,
+  centerMode: false,
   focusOnSelect: true
 });

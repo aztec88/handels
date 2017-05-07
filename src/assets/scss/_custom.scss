@@ -66,46 +66,51 @@ body{
       }
     }
   }
-  .search{
-    margin: 5px 0 0 0;
-    border-bottom: 2px solid white;
-    input{
-      height: 25px;
-      padding: 0;
-      background: transparent!important;
-      border: 0!important;
-      box-shadow: none!important;
-      color: white;
-      &:focus,:active{
-        box-shadow: none;
-      }
-    }
-    .button{
-      padding: 4px 0;
-      background: transparent!important;
-      i{
-        font-size: 21px;
-      }
-    }
 
+}
+.search{
+  margin: 5px 0 0 0;
+  border-bottom: 2px solid white;
+  input{
+    height: 25px;
+    padding: 0;
+    background: transparent!important;
+    border: 0!important;
+    box-shadow: none!important;
+    color: white;
+    &:focus,:active{
+      box-shadow: none;
+    }
   }
+  .button{
+    padding: 4px 0;
+    background: transparent!important;
+    i{
+      font-size: 21px;
+    }
+  }
+
 }
 .main-header{
   background: white;
   border-bottom: 2px solid $font-color;
 }
+
 .main-menu{
   .logo{
     margin: 10px 0;
   }
+  .last-one{
+    padding-right: 0!important;
+  }
+  .desk-menu{
+    margin-top: 10px;
+    margin-right: -25px;
+  }
   ul.menu{
-    li.is-dropdown-submenu-parent > a::after{
-      /*right: -15px;*/
-    }
     .is-dropdown-submenu {
     min-width: 250px;
     }
-    margin-top: 11px;
     li{
       /*margin: 25px 25px;*/
       a{
@@ -117,11 +122,7 @@ body{
           color: $main-color;
         }
       }
-      &:last-child{
-        a{
-          padding: 15px 0 15px 25px;
-        }
-      }
+
     }
     .active{
       a{
@@ -139,6 +140,10 @@ body{
     height: 53px;
     margin: 10px 0;
   }
+  i{
+    margin-top: 21px;
+    color: $main-color;
+  }
 }
 @media(max-width:860px){
   .header, .main-header{
@@ -148,6 +153,46 @@ body{
     display: block;
   }
 }
+/*OFF CANVAS*/
+.off-canvas{
+  background: $main-color;
+  border-left: 3px black solid;
+  .logo-part{
+    background: white;
+    text-align: center;
+  }
+  .search-wrapper{
+    padding: 30px 20px;
+  }
+  .search{
+    .middle{
+      width: 100%;
+    }
+  }
+  .menu{
+    text-align: center!important;
+    li{
+      a{
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        width: 100%!important;
+      }
+    }
+  }
+  .menu.nested{
+    margin: 0;
+  }
+  .is-accordion-submenu-parent > a::after {
+    right: 6px;
+}
+.menu .active > a {
+    background: $footer;
+
+}
+}
+
 /*FOOTER*/
 .footer-ul{
   li{
@@ -300,17 +345,31 @@ body{
     padding: 10px;
   }
   .slider-for{
+
     img{
       @media (max-width: 640px) {
         height: 234px!important;
         width: auto;
       }
+
     }
     border: 1px $body-font-color solid;
   }
   .slider-nav{
     border: 1px $body-font-color solid;
     margin-top: 10px;
+    @include breakpoint(small) {
+      img{
+        height: 50px;
+        width: auto;
+      }
+    }
+    @include breakpoint(medium) {
+      img{
+        height: 94px;
+        width: auto;
+      }
+    }
   }
 }
 .products{
@@ -319,6 +378,7 @@ body{
 }
 
 .product-single{
+    max-width: 280px;
   .product-name{
     padding: 0;
     position: relative;
@@ -337,10 +397,19 @@ body{
   .product-picture{
     @include breakpoint(small) {
       img{
-      height: 200px;
+        height: 150px;
       }
     }
-
+    @include breakpoint(medium) {
+      img{
+        height: 130px;
+      }
+    }
+    @include breakpoint(large) {
+      img{
+        height: 170px;
+      }
+    }
     a{
       text-align: center;
     }
