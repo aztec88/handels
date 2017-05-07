@@ -112,7 +112,7 @@ body{
         text-transform: uppercase;
         color: $body-font-color;
         font-size: 16px;
-        padding: 26px 25px;
+        padding: 26px 24px;
         &:hover{
           color: $main-color;
         }
@@ -131,7 +131,36 @@ body{
     }
   }
 }
+.mob-header{
+  display: none;
+  background: white;
+  border-bottom: 2px $main-color solid;
+  img{
+    height: 53px;
+    margin: 10px 0;
+  }
+}
+@media(max-width:860px){
+  .header, .main-header{
+    display: none;
+  }
+  .mob-header{
+    display: block;
+  }
+}
 /*FOOTER*/
+.footer-ul{
+  li{
+    padding: 5px!important;
+    text-align: center;
+    a{
+      text-align: center;
+    }
+    .social-icons{
+      display: inline;
+    }
+  }
+}
 .footer{
   background: $footer;
 }
@@ -179,6 +208,19 @@ body{
   .service-icon{
     width: 40px;
     text-align: right;
+  }
+  @media(max-width:640px){
+    li{
+      h4{
+        font-size: 30px;
+      }
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+  .service-text{
+    width: 100%;
   }
 }
 
@@ -275,14 +317,16 @@ body{
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .product-single{
   .product-name{
+    padding: 0;
     position: relative;
-    height: 50px;
+    height: 70px;
     background: $main-color;
     border: 1px $main-color solid;
     h6{
-      margin: 0;
+      margin: 0 10px;
       @include vertical-center;
       a{
         color: white;
@@ -291,6 +335,12 @@ body{
     }
   }
   .product-picture{
+    @include breakpoint(small) {
+      img{
+      height: 200px;
+      }
+    }
+
     a{
       text-align: center;
     }
@@ -298,6 +348,7 @@ body{
     padding: 10px;
     border-left: 1px $body-font-color solid;
     border-right: 1px $body-font-color solid;
+    border-bottom: 1px $body-font-color solid;
   }
   .product-dsc{
     padding-bottom: 10px;
