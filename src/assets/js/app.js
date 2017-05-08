@@ -3,6 +3,7 @@ $(document).foundation();
 //SLIDER FOR HOME
 $('.autoplay').slick({
   slidesToShow: 1,
+  lazyLoad: 'ondemand',
   dots: true,
   arrows: true,
   slidesToScroll: 1,
