@@ -29,6 +29,7 @@ PATHS:
     - "bower_components/motion-ui/src"
     - "bower_components/slick-carousel/slick"
     - "bower_components/lightgallery/src/sass"
+    - "bower_components/animate.css/"
   # Paths to JavaScript libraries, which are combined into one file
   javascript:
     # Libraries required by Foundation

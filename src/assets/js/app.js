@@ -1,5 +1,4 @@
 $(document).foundation();
-
 //SLIDER FOR HOME
 $('.autoplay').slick({
   slidesToShow: 1,
