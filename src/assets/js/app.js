@@ -22,7 +22,8 @@ $('.autoplay2').slick({
 //PRODUCT GALLERY
 $('.slider-for').slick({
   slidesToShow: 1,
-  adaptiveHeight: true,
+  adaptiveHeight: false,
+  lazyLoad: 'ondemand',
   slidesToScroll: 1,
   arrows: false,
   fade: true,
@@ -31,6 +32,7 @@ $('.slider-for').slick({
 $('.slider-nav').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  lazyLoad: 'ondemand',
   asNavFor: '.slider-for',
   dots: true,
   arrows: false,

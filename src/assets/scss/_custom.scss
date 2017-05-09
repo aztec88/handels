@@ -362,6 +362,7 @@ body{
   .slider-for{
 
     img{
+      height: 400px;
       @media (max-width: 640px) {
         height: 234px!important;
         width: auto;
