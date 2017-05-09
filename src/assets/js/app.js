@@ -9,6 +9,15 @@ $('.autoplay').slick({
   autoplay: true,
   autoplaySpeed: 5000,
 });
+$('.autoplay2').slick({
+  slidesToShow: 1,
+  lazyLoad: 'ondemand',
+  dots: true,
+  arrows: false,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+});
 
 //PRODUCT GALLERY
 $('.slider-for').slick({
