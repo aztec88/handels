@@ -1,5 +1,21 @@
 <div class="side-panel show-for-medium medium-4 large-3 column">
 
+  <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
+    <li><h4>KATEGORIEN</h4></li>
+    <br><br>
+    [[pdoMenu?
+        &parents=`42`
+        &level=`4`
+        &tplOuter=`@INLINE [[+wrapper]]`
+        &parentClass=`menu`
+        &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical sublevel-1">[[+wrapper]]</ul></li>`
+        &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>[[+wrapper]]`
+    ]]
+    <!--<li><a href="">AUTO Parfüme</a></li>
+    <li><a href="">LUX Parfüme</a></li>
+    <li><a href="">HAUS Parfüme</a></li>-->
+  </ul>
+  
     <ul class="vertical-list side menu vertical">
       <li><h4>SERVICE</h4></li>
       <li>
@@ -34,21 +50,7 @@
       </li>
     </ul>
 
-    <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
-      <li><h4>KATEGORIEN</h4></li>
-      <br><br>
-      [[pdoMenu?
-          &parents=`42`
-          &level=`4`
-          &tplOuter=`@INLINE [[+wrapper]]`
-          &parentClass=`menu`
-          &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical sublevel-1">[[+wrapper]]</ul></li>`
-          &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>[[+wrapper]]`
-      ]]
-      <!--<li><a href="">AUTO Parfüme</a></li>
-      <li><a href="">LUX Parfüme</a></li>
-      <li><a href="">HAUS Parfüme</a></li>-->
-    </ul>
+
 
 
     <ul class="vertical-list side menu vertical">

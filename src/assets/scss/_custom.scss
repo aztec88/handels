@@ -3,7 +3,9 @@
     padding: 0;
   }
 }
-
+*{
+  outline: none;
+}
 .not-active {
    pointer-events: none;
    cursor: default;
@@ -29,10 +31,10 @@
 body{
   p{
     @include breakpoint(small) {
-      font-size: 13px;
+      font-size: 14px;
     }
     @include breakpoint(medium) {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 }
@@ -133,6 +135,9 @@ body{
       }
     }
   }
+}
+.menu-part{
+  padding: 0;
 }
 .mob-header{
   display: none;
@@ -266,14 +271,14 @@ body{
     text-align: right;
   }
   @media(max-width:640px){
-    li{
+    /*li{
       h4{
         font-size: 30px;
       }
       p{
         font-size: 18px;
       }
-    }
+    }*/
     .service-text{
       width: 100%;
     }
@@ -360,14 +365,11 @@ body{
     padding: 10px;
   }
   .slider-for{
-
     img{
-      height: 400px;
       @media (max-width: 640px) {
         height: 234px!important;
         width: auto;
       }
-
     }
     border: 1px $body-font-color solid;
   }
@@ -527,6 +529,10 @@ $multilevel-accordion-sub-bg: $body-font-color;
 $multilevel-accordion-separator: #41444a;
 
 .multilevel-accordion-menu {
+  max-width: 250px;
+  @media(max-width: 640px){
+    max-width: none;
+  }
   li{
     a{
       font-size: 13px;

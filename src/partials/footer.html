@@ -15,6 +15,24 @@
       </ul>
     </div>-->
     <div class="column no-padd">
+      <ul class="multilevel-accordion-menu vertical menu" data-accordion-menu>
+        <li><h4>KATEGORIEN</h4></li>
+        <br><br>
+        [[pdoMenu?
+            &parents=`42`
+            &level=`5`
+            &tplOuter=`@INLINE [[+wrapper]]`
+            &parentClass=`menu`
+            &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical sublevel-1">[[+wrapper]]</ul></li>`
+            &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>[[+wrapper]]`
+        ]]
+        <!--<li><a href="">AUTO Parfüme</a></li>
+        <li><a href="">LUX Parfüme</a></li>
+        <li><a href="">HAUS Parfüme</a></li>-->
+      </ul>
+    </div>
+
+    <div class="column no-padd">
       <ul class="vertical-list menu vertical">
         <li><h4>KATALOG</h4></li>
         [[getImageList?
@@ -24,22 +42,7 @@
                   ]]
       </ul>
     </div>
-    <div class="column no-padd show-for-medium">
-      <ul class="vertical-list menu vertical" data-accordion-menu>
-        <li><h4>KATEGORIEN</h4></li>
-        [[pdoMenu?
-            &parents=`42`
-            &level=`4`
-            &tplOuter=`@INLINE [[+wrapper]]`
-            &parentClass=`menu`
-            &tplParentRow=`@INLINE <li><a href="[[+link]]">[[+menutitle]]</a><ul class="menu vertical nested">[[+wrapper]]</ul></li>`
-            &tpl=`@INLINE <li[[+classes]]><a href="[[+link]]">[[+menutitle]]</a></li>[[+wrapper]]`
-        ]]
-        <!--<li><a href="">AUTO Parfüme</a></li>
-        <li><a href="">LUX Parfüme</a></li>
-        <li><a href="">HAUS Parfüme</a></li>-->
-      </ul>
-    </div>
+
     <div class="column no-padd">
       <ul class="vertical-list menu vertical">
         <li><h4>SERVICE</h4></li>
