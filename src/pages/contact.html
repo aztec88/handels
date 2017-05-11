@@ -9,7 +9,7 @@
     </div>
 
     [[!FormIt?
-               &hooks=`email,redirect`
+               &hooks=`recaptcha,spam,email,redirect`
                &emailTpl=`emailChunk`
                &emailTo=`aztec88@gmail.com`
                &redirectTo=``
@@ -24,36 +24,39 @@
           <label for="name">
               <span class="error">[[!+fi.error.name]]</span>
           </label>
-          <input type="text" name="name" id="name" value="[[!+fi.name]]" placeholder="Vormane"/>
+          <input type="text" name="name" id="name" value="[[!+fi.name]]" placeholder="Vormane" required/>
         </div>
 
         <div class="small-12 medium-6 column">
           <label for="email">
               <span class="error">[[!+fi.error.email]]</span>
           </label>
-          <input type="text" name="email" id="email" value="[[!+fi.email]]" placeholder="E-mail"/>
+          <input type="text" name="email" id="email" value="[[!+fi.email]]" placeholder="E-mail" required/>
         </div>
 
         <div class="small-12 medium-6 column">
           <label for="adress">
               <span class="error">[[!+fi.error.adress]]</span>
           </label>
-          <input type="text" name="adress" id="adress" value="[[!+fi.adress]]" placeholder="Adresse"/>
+          <input type="text" name="adress" id="adress" value="[[!+fi.adress]]" placeholder="Adresse" required/>
         </div>
 
         <div class="small-12 medium-6 column">
           <label for="phone">
               <span class="error">[[!+fi.error.phone]]</span>
           </label>
-          <input type="text" name="phone" id="phone" value="[[!+fi.phone]]" placeholder="Telefon" />
+          <input type="text" name="phone" id="phone" value="[[!+fi.phone]]" placeholder="Telefon" required/>
         </div>
         <div class="column">
           <label for="text">
               <span class="error">[[!+fi.error.text]]</span>
           </label>
-          <textarea name="text" id="text" cols="55" rows="7" value="[[!+fi.text]]" placeholder="Nachricht"></textarea>
+          <textarea name="text" id="text" cols="55" rows="7" value="[[!+fi.text]]" placeholder="Nachricht" required></textarea>
         </div>
-        <br class="clearfix" />
+
+        <br class="clear" />
+    <!--[[!+formit.recaptcha_html]]-->
+    <br class="clear" />
 
         <div class="form-buttons column">
             <input type="submit" class="button float-right" value="Senden" />
