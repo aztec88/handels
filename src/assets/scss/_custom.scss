@@ -152,7 +152,18 @@ body{
     color: $main-color;
   }
 }
-@media(max-width:860px){
+  .logo1{
+    display: none!important;
+  }
+@media (max-width: 1190px){
+  .logo{
+    display: none;
+  }
+  .logo1{
+    display: block!important;
+  }
+}
+@media(max-width:920px){
   .header, .main-header{
     display: none;
   }
