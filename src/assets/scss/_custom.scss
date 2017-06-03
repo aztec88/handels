@@ -136,6 +136,7 @@ body{
     }
   }
 }
+
 .menu-part{
   padding: 0;
 }
@@ -626,5 +627,9 @@ $multilevel-accordion-separator: #41444a;
    a {
     color: $body-font-color!important;
     background: none;
+    &::after{
+      border-color: $body-font-color transparent transparent;
+    }
 }
+
 }
